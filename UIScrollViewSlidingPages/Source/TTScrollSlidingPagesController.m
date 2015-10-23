@@ -446,6 +446,7 @@
     //if not already on the page and the page is within the bounds of the pages we have, scroll to the page!
     if ([self getCurrentDisplayedPage] != page && page < [bottomScrollView.subviews count]){
         [self scrollToPage:page animated:YES];
+        [self.delegate didScrollToViewAtIndex: page];
     }
     
 }
